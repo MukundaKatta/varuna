@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "varuna"
+version = "0.1.0"
+description = "Adaptive web scraping framework — single requests to full-scale crawls"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+keywords = ["web-scraping", "crawler", "scraping-framework"]
+
+[project.scripts]
+varuna = "varuna.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
